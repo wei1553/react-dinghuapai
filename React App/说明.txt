@@ -1,0 +1,8 @@
+
+
+
+
+
+安装scss插件                 npm run eject 
+			     cnpm install node-sass sass-loader --save
+配置反向代理                 								
