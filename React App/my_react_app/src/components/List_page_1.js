@@ -5,7 +5,85 @@ import {
   NavLink
 } from 'react-router-dom';
 
+
+function	height_tiao1() {
+		var tiao_1 = document.getElementById("tiao_1")
+		var tiao_8 = document.getElementsByClassName("tiao_8")[0]
+ 		var list_right = document.getElementsByClassName("list_right")[0]
+		tiao_1.style.background = "#fff";
+		tiao_1.style.color = "#ca0e25";
+		tiao_1.style.borderLeft = "3px solid #ca0e25"
+		list_right.scrollTop = "0"
+		console.log(list_right.scrollTop)
+}
+function	height_tiao2() {
+		var tiao_2 = document.getElementById("tiao_1")
+		var list_right = document.getElementsByClassName("list_right")[0]
+		tiao_2.style.background = "#fff";
+		tiao_2.style.color = "#ca0e25";
+		tiao_2.style.borderLeft = "3px solid #ca0e25"
+		list_right.scrollTop = "350"
+		console.log(list_right.scrollTop)
+}
+function	height_tiao3() {
+		var tiao_3 = document.getElementById("tiao_3")
+		var list_right = document.getElementsByClassName("list_right")[0]
+		tiao_3.style.background = "#fff";
+		tiao_3.style.color = "#ca0e25";
+		tiao_3.style.borderLeft = "3px solid #ca0e25"
+		list_right.scrollTop = "200"
+		console.log(list_right.scrollTop)
+}
+function	height_tiao4() {
+		var tiao_2 = document.getElementById("tiao_1")
+		var list_right = document.getElementsByClassName("list_right")[0]
+		tiao_2.style.background = "#fff";
+		tiao_2.style.color = "#ca0e25";
+		tiao_2.style.borderLeft = "3px solid #ca0e25"
+		list_right.scrollTop = "200"
+		console.log(list_right.scrollTop)
+}
+function	height_tiao5() {
+		var tiao_2 = document.getElementById("tiao_1")
+		var list_right = document.getElementsByClassName("list_right")[0]
+		tiao_2.style.background = "#fff";
+		tiao_2.style.color = "#ca0e25";
+		tiao_2.style.borderLeft = "3px solid #ca0e25"
+		list_right.scrollTop = "200"
+		console.log(list_right.scrollTop)
+}
+function	height_tiao6() {
+		var tiao_2 = document.getElementById("tiao_1")
+		var list_right = document.getElementsByClassName("list_right")[0]
+		tiao_2.style.background = "#fff";
+		tiao_2.style.color = "#ca0e25";
+		tiao_2.style.borderLeft = "3px solid #ca0e25"
+		list_right.scrollTop = "200"
+		console.log(list_right.scrollTop)
+}
+function	height_tiao7() {
+		var tiao_2 = document.getElementById("tiao_1")
+		var list_right = document.getElementsByClassName("list_right")[0]
+		tiao_2.style.background = "#fff";
+		tiao_2.style.color = "#ca0e25";
+		tiao_2.style.borderLeft = "3px solid #ca0e25"
+		list_right.scrollTop = "200"
+		console.log(list_right.scrollTop)
+}
+function	height_tiao8() {
+		var tiao_2 = document.getElementById("tiao_1")
+		var list_right = document.getElementsByClassName("list_right")[0]
+		tiao_2.style.background = "#fff";
+		tiao_2.style.color = "#ca0e25";
+		tiao_2.style.borderLeft = "3px solid #ca0e25"
+		list_right.scrollTop = "200"
+		console.log(list_right.scrollTop)
+}
 class List_page_1 extends Component{
+	renderContent = tab =>
+    (<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }}>
+      <p>Content of {tab.title}</p>
+    </div>);
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -19,11 +97,6 @@ class List_page_1 extends Component{
 			items7 : "",
 			arr_right : []
 		}
-		this.goto = this.goto.bind(this);
-	}
-	goto(fid,did,sid) {
-		console.log(this);
-		this.props.history.push("/detail/" + fid + "/" + did + "/" + sid);
 	}
 	getFilms() {
 		axios.get("/api/product/category")
@@ -35,7 +108,6 @@ class List_page_1 extends Component{
 			this.state.items5 = res.data.data.label[4]
 			this.state.items6 = res.data.data.label[5]
 			this.state.items7 = res.data.data.label[6]
-			this.state.items8 = res.data.data.label[7]
 			this.setState({
 				header : res.data.data.category,
 				items1 : this.state.items1,
@@ -54,7 +126,7 @@ class List_page_1 extends Component{
 	}
 	render(){
 		return(
-			<div className="page1">
+			<div className="page1"> 
 				<header>
 					<div className="top">
 						<span className="iconfont icon-fangdajing">
@@ -85,25 +157,25 @@ class List_page_1 extends Component{
 					<div className="sec_list">	
 						<div className="list_left">
 							<ul>
-								<li className="tiao_1">
+								<li id="tiao_1" className="tiao_8" onClick={height_tiao1}>
 									{this.state.items1.name}
 								</li>
-								<li className="tiao_2">
+								<li id="tiao_2" className="tiao_8" onClick={height_tiao2}>
 									{this.state.items2.name}
 								</li>
-								<li className="tiao_3">
+								<li id="tiao_3" className="tiao_8" onClick={height_tiao3}>
 									{this.state.items3.name}
 								</li>
-								<li className="tiao_4">
+								<li id="tiao_4" className="tiao_8" onClick={height_tiao4}>
 									{this.state.items4.name}
 								</li>
-								<li className="tiao_5">
+								<li id="tiao_5" className="tiao_8" onClick={height_tiao5}>
 									{this.state.items5.name}
 								</li>
-								<li className="tiao_6">
+								<li id="tiao_6" className="tiao_8" onClick={height_tiao6}>
 									{this.state.items6.name}
 								</li>
-								<li className="tiao_7">
+								<li id="tiao_7" className="tiao_8" onClick={height_tiao7}>
 									{this.state.items7.name}
 								</li>
 							</ul>
@@ -122,7 +194,7 @@ class List_page_1 extends Component{
 												item.values.map((ite,inde)=>{
 													return(
 														<li key={ite.id}>
-															<NavLink onClick={()=>this.goto(ite.name,ite.id,ite.attr_id)}>
+															<NavLink to={"/list2" +"/" + ite.name + "/" + ite.attr_id + "/" + ite.id}>
 																<span></span>
 																<span>{ite.name}</span>
 																<img src={ite.img} />

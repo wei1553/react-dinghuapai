@@ -29,8 +29,6 @@ class CarouSel extends Component {
 	getFilms() {
 		axios.get('/api/home/index')
 		.then((res)=>{
-			console.log(res)	
-			console.log(res.data.data.special)
 			this.state.arr = res.data.data.special
 			this.state.arr_top4 = res.data.data.article
 			this.setState({
@@ -43,7 +41,6 @@ class CarouSel extends Component {
 				arr_top4_2 : res.data.data.article.waparticle,
 				arr_top5 : res.data.data.comments.data
 			})
-			console.log(this.state.arr)
 		})
 	}
 	componentDidMount() {

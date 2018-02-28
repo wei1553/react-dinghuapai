@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Route,
-  NavLink
+  Route
 } from 'react-router-dom';
 import CarouSel from './components/CarouSel'
 import List_page_1 from './components/List_page_1'
@@ -21,7 +20,7 @@ class App extends Component {
 	  		<div>
 		  		<Route exact path="/" component={CarouSel} />
 		  		<Route path="/list" component={List_page_1} />
-		  		<Route path="/list2/:fid" component={List_page_2} />
+		  		<Route path="/list2/:fid/:did/:sid" component={List_page_2} />
 		  	</div>	
 	  	</Router>
 	  )	
